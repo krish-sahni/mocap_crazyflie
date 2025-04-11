@@ -1,0 +1,41 @@
+{
+    "ros.distro": "humble",
+    "python.autoComplete.extraPaths": [
+        "/home/krishsahni/ros2_ws/build/rtabmap_python",
+        "/home/krishsahni/ros2_ws/install/rtabmap_python/lib/python3.10/site-packages",
+        "/home/krishsahni/ros2_ws/install/rtabmap_msgs/local/lib/python3.10/dist-packages",
+        "/home/krishsahni/ros2_ws/build/my_robot_tut",
+        "/home/krishsahni/ros2_ws/install/my_robot_tut/lib/python3.10/site-packages",
+        "/home/krishsahni/ros2_ws/install/motion_capture_tracking_interfaces/local/lib/python3.10/dist-packages",
+        "/home/krishsahni/ros2_ws/build/mocap_test_data_send",
+        "/home/krishsahni/ros2_ws/install/mocap_test_data_send/lib/python3.10/site-packages",
+        "/home/krishsahni/ros2_ws/install/depthai_ros_driver/local/lib/python3.10/dist-packages",
+        "/home/krishsahni/ros2_ws/install/depthai_ros_msgs/local/lib/python3.10/dist-packages",
+        "/home/krishsahni/ros2_ws/install/crazyflie_sim/local/lib/python3.10/dist-packages",
+        "/home/krishsahni/ros2_ws/install/crazyflie_examples/local/lib/python3.10/dist-packages",
+        "/home/krishsahni/ros2_ws/build/crazyflie_py",
+        "/home/krishsahni/ros2_ws/install/crazyflie_py/lib/python3.10/site-packages",
+        "/home/krishsahni/ros2_ws/install/crazyflie_interfaces/local/lib/python3.10/dist-packages",
+        "/opt/ros/humble/lib/python3.10/site-packages",
+        "/opt/ros/humble/local/lib/python3.10/dist-packages"
+    ],
+    "python.analysis.extraPaths": [
+        "/home/krishsahni/ros2_ws/build/rtabmap_python",
+        "/home/krishsahni/ros2_ws/install/rtabmap_python/lib/python3.10/site-packages",
+        "/home/krishsahni/ros2_ws/install/rtabmap_msgs/local/lib/python3.10/dist-packages",
+        "/home/krishsahni/ros2_ws/build/my_robot_tut",
+        "/home/krishsahni/ros2_ws/install/my_robot_tut/lib/python3.10/site-packages",
+        "/home/krishsahni/ros2_ws/install/motion_capture_tracking_interfaces/local/lib/python3.10/dist-packages",
+        "/home/krishsahni/ros2_ws/build/mocap_test_data_send",
+        "/home/krishsahni/ros2_ws/install/mocap_test_data_send/lib/python3.10/site-packages",
+        "/home/krishsahni/ros2_ws/install/depthai_ros_driver/local/lib/python3.10/dist-packages",
+        "/home/krishsahni/ros2_ws/install/depthai_ros_msgs/local/lib/python3.10/dist-packages",
+        "/home/krishsahni/ros2_ws/install/crazyflie_sim/local/lib/python3.10/dist-packages",
+        "/home/krishsahni/ros2_ws/install/crazyflie_examples/local/lib/python3.10/dist-packages",
+        "/home/krishsahni/ros2_ws/build/crazyflie_py",
+        "/home/krishsahni/ros2_ws/install/crazyflie_py/lib/python3.10/site-packages",
+        "/home/krishsahni/ros2_ws/install/crazyflie_interfaces/local/lib/python3.10/dist-packages",
+        "/opt/ros/humble/lib/python3.10/site-packages",
+        "/opt/ros/humble/local/lib/python3.10/dist-packages"
+    ]
+}

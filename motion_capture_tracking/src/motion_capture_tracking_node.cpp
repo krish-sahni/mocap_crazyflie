@@ -113,17 +113,23 @@ int main(int argc, char **argv)
   msgPointCloud.is_dense = true;
 
   // prepare pose array publisher
-  rclcpp::Publisher<motion_capture_tracking_interfaces::msg::NamedPoseArray>::SharedPtr pubPoses;
-  if (poses_qos == "none") {
-    pubPoses = node->create_publisher<motion_capture_tracking_interfaces::msg::NamedPoseArray>("poses", 1);
-  } else if (poses_qos == "sensor") {
-    rclcpp::SensorDataQoS sensor_data_qos;
-    sensor_data_qos.keep_last(1);
-    sensor_data_qos.deadline(rclcpp::Duration(0/*s*/, (int)1e9/poses_deadline /*ns*/));
-    pubPoses = node->create_publisher<motion_capture_tracking_interfaces::msg::NamedPoseArray>("poses", sensor_data_qos);
-  } else {
-    throw std::runtime_error("Unknown QoS mode! " + poses_qos);
-  }
+  // rclcpp::Publisher<motion_capture_tracking_interfaces::msg::NamedPoseArray>::SharedPtr pubPoses;
+  // if (poses_qos == "none") {
+  //   pubPoses = node->create_publisher<motion_capture_tracking_interfaces::msg::NamedPoseArray>("poses", 1);
+  // } else if (poses_qos == "sensor") {
+  //   rclcpp::SensorDataQoS sensor_data_qos;
+  //   sensor_data_qos.keep_last(1);
+  //   sensor_data_qos.deadline(rclcpp::Duration(0/*s*/, (int)1e9/poses_deadline /*ns*/));
+  //   pubPoses = node->create_publisher<motion_capture_tracking_interfaces::msg::NamedPoseArray>("poses", sensor_data_qos);
+  // } else {
+  //   throw std::runtime_error("Unknown QoS mode! " + poses_qos);
+  // }
+
+
+  rclcpp::SensorDataQoS sensor_data_qos;
+  sensor_data_qos.keep_last(1);
+  sensor_data_qos.deadline(rclcpp::Duration::from_seconds(1.0 / poses_deadline));
+  auto pubPoses = node->create_publisher<motion_capture_tracking_interfaces::msg::NamedPoseArray>("poses", sensor_data_qos);
 
   motion_capture_tracking_interfaces::msg::NamedPoseArray msgPoses;
   msgPoses.header.frame_id = "world";
@@ -322,4 +328,4 @@ int main(int argc, char **argv)
   }
 
   return 0;
-  }
+  } 
